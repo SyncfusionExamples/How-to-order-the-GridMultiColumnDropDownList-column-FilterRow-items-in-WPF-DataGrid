@@ -2,7 +2,8 @@
 How to order the GridMultiColumnDropDownList column FilterRow items in WPF DataGrid (SfDataGrid)?
 
 By default, the ComboBox for FilterRow will be loaded with items based on the records order in the DataGrid. In order to sort the items in ComboBox of FilterRow, CustomCellRenderer can be derived from the GridFilterRowMultiSelectRenderer and adding the custom renderer to the grid.
-```
+
+```C#
 public class GridMultiSelectComboBoxRendererExt : GridFilterRowMultiSelectRenderer
 {
     public GridMultiSelectComboBoxRendererExt() : base()
@@ -18,7 +19,7 @@ public class GridMultiSelectComboBoxRendererExt : GridFilterRowMultiSelectRender
     }
 }
 ```
-```
+```C#
 //Remove the existing renderer
 Grid.FilterRowCellRenderers.Remove("MultiSelectComboBox");
 //Add the customized renderer
